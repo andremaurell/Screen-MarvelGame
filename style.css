@@ -1,0 +1,162 @@
+body {
+    font-family: 'ssf4', Courier, monospace;
+    background: var(--cor-secundaria);
+}
+
+body::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: url("../Tela\ jogo/imagens/1cYrMYF.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    opacity: 0.2;
+}   
+
+.main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cabecalho{
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.cabecalho .titulo {
+    color: var(--cor-titulo-fraco);
+    text-transform: uppercase;
+    font-size: 52px;
+    line-height: 102px;
+    -webkit-text-stroke: 2px var(--cor-titulo-forte);
+    position: relative;
+    top: 60px;
+}
+
+.Select-person {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.Select-person .big-person {
+    text-align: center;
+    width: 30%;
+    height: 70vh;
+    position: relative;
+}
+
+.Select-person .big-person img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Select-person .big-person .nome::before {
+    content: '';
+    height: 30px;
+    width: 100%;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+}
+
+.Select-person .big-person .nome h2{
+    color: var(--cor-padrao);
+    font-family: 'command', sans-serif;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 27px;
+}
+
+.Select-person .big-person.Player1-person .nome::before {
+    background-color: var(--cor-azul-principal);
+}
+
+.Select-person .big-person.Player2-person .nome::before {
+    background-color: var(--cor-vermelha-principal);
+}
+
+.Select-person .List-Persons {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+    justify-content: center;
+    gap: 12px;
+}
+
+.Select-person .List-Persons .Selected {
+    border: 2px solid var(--cor-padrao);
+    background-color: var(--cor-padrao);
+    width: 30%;
+    height: 160px;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 5px;
+    position: relative;
+    transition: 0.15s ease-in-out;
+}
+
+.Select-person .List-Persons .Selected img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.Select-person .List-Persons .Selected.Person-P1 {
+    border: 2px solid var(--cor-azul-media);
+    animation: c-glowing-blue .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+.Select-person .List-Persons .Selected:hover {
+    animation: c-glowing-blue .3s ease-in-out infinite;
+    animation-direction: alternate;
+    transform: scale(1.07);
+}
+
+.Select-person .List-Persons .Selected.Person-P2 {
+    border: 2px solid var(--cor-vermelha-fraca);
+    animation: c-glowing-red .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+.Select-person .List-Persons .Selected.Person-P2:hover {
+    animation: c-glowing-red .3s ease-in-out infinite;
+    animation-direction: alternate;
+    transform: scale(1.07);
+}
+
+.Select-person .List-Persons .Selected .tag{
+    display: none;
+    font-family: 'Times New Roman', Times, Serif;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: var(--cor-padrao);
+    transition: opacity .3s ease-in-out;
+    animation: text-glowing-blue .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+.Select-person .List-Persons .Selected.Person-P1 .tag{
+    display: block;
+    animation: text-glowing-blue .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+.Select-person .List-Persons .Selected.Person-P2 .tag{
+    display: block;
+    animation: text-glowing-red .3s ease-in-out infinite;
+    animation-direction: alternate;
+}

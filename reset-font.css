@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'ssf4';
+  src: url(./fontes/SSF4_ABUKET.woff);
+}
+
+@font-face {
+  font-family: 'command';
+  src: url(./fontes/PILOT_COMMAND.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+  }
+  
+  ul {
+    list-style: none;
+  }
